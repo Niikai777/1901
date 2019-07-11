@@ -1,0 +1,55 @@
+
+
+路由器是一台电脑，但和linu服务器来说是小儿科，服务器更强大，运行路由协议也没问题
+找Zebra（斑马）和Quagga（斑驴）的照片
+
+关闭防火墙！！！！
+
+第1台主机：
+yum install quagga
+
+which zebra
+
+vim /etc/quagga/zebra.conf
+hostname desktop
+password 123
+
+zebra -d   开启服务
+
+netstat -ntulp | grep zebra    查看
+
+yum install telnet
+
+telnet localhost 2601
+
+不论启动什么样的路由协议，都必须要先启动zebra才可以
+
+password 123
+router rip
+version 2
+network 192.168.4.0/24
+
+[root@desktop quagga]# cat ospfd.conf 
+password 123
+router ospf
+ospf router-id 172.25.0.10	//至少一台机器要设置
+network 172.25.0.0/24 area 0
+
+
+第2台主机：
+
+可以先介绍ospf    然后再说rip
+
+
+vim ospfd.conf
+
+password 123
+router ospf	//这个要写在network上面
+network 172.25.0.0/24 area 0
+
+
+
+
+
+
+
