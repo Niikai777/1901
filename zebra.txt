@@ -1,11 +1,11 @@
+aaa
 
+è·¯ç”±å™¨æ˜¯ä¸€å°ç”µè„‘ï¼Œä½†å’ŒlinuæœåŠ¡å™¨æ¥è¯´æ˜¯å°å„¿ç§‘ï¼ŒæœåŠ¡å™¨æ›´å¼ºå¤§ï¼Œè¿è¡Œè·¯ç”±åè®®ä¹Ÿæ²¡é—®é¢˜
+æ‰¾Zebraï¼ˆæ–‘é©¬ï¼‰å’ŒQuaggaï¼ˆæ–‘é©´ï¼‰çš„ç…§ç‰‡
 
-Â·ÓÉÆ÷ÊÇÒ»Ì¨µçÄÔ£¬µ«ºÍlinu·şÎñÆ÷À´ËµÊÇĞ¡¶ù¿Æ£¬·şÎñÆ÷¸üÇ¿´ó£¬ÔËĞĞÂ·ÓÉĞ­ÒéÒ²Ã»ÎÊÌâ
-ÕÒZebra£¨°ßÂí£©ºÍQuagga£¨°ßÂ¿£©µÄÕÕÆ¬
+å…³é—­é˜²ç«å¢™ï¼ï¼ï¼ï¼
 
-¹Ø±Õ·À»ğÇ½£¡£¡£¡£¡
-
-µÚ1Ì¨Ö÷»ú£º
+ç¬¬1å°ä¸»æœºï¼š
 yum install quagga
 
 which zebra
@@ -14,15 +14,15 @@ vim /etc/quagga/zebra.conf
 hostname desktop
 password 123
 
-zebra -d   ¿ªÆô·şÎñ
+zebra -d   å¼€å¯æœåŠ¡
 
-netstat -ntulp | grep zebra    ²é¿´
+netstat -ntulp | grep zebra    æŸ¥çœ‹
 
 yum install telnet
 
 telnet localhost 2601
 
-²»ÂÛÆô¶¯Ê²Ã´ÑùµÄÂ·ÓÉĞ­Òé£¬¶¼±ØĞëÒªÏÈÆô¶¯zebra²Å¿ÉÒÔ
+ä¸è®ºå¯åŠ¨ä»€ä¹ˆæ ·çš„è·¯ç”±åè®®ï¼Œéƒ½å¿…é¡»è¦å…ˆå¯åŠ¨zebraæ‰å¯ä»¥
 
 password 123
 router rip
@@ -32,19 +32,19 @@ network 192.168.4.0/24
 [root@desktop quagga]# cat ospfd.conf 
 password 123
 router ospf
-ospf router-id 172.25.0.10	//ÖÁÉÙÒ»Ì¨»úÆ÷ÒªÉèÖÃ
+ospf router-id 172.25.0.10	//è‡³å°‘ä¸€å°æœºå™¨è¦è®¾ç½®
 network 172.25.0.0/24 area 0
 
 
-µÚ2Ì¨Ö÷»ú£º
+ç¬¬2å°ä¸»æœºï¼š
 
-¿ÉÒÔÏÈ½éÉÜospf    È»ºóÔÙËµrip
+å¯ä»¥å…ˆä»‹ç»ospf    ç„¶åå†è¯´rip
 
 
 vim ospfd.conf
 
 password 123
-router ospf	//Õâ¸öÒªĞ´ÔÚnetworkÉÏÃæ
+router ospf	//è¿™ä¸ªè¦å†™åœ¨networkä¸Šé¢
 network 172.25.0.0/24 area 0
 
 
